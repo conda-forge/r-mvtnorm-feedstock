@@ -1,4 +1,4 @@
-{% set version = '1.0-10' %}
+{% set version = '1.0-11' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mvtnorm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mvtnorm/mvtnorm_{{ version }}.tar.gz
-  sha256: 31df19cd8b4cab9d9a70dba00442b7684e625d4ca143a2c023c2c5872b07ad12
+  sha256: 0321612de99aa9bc75a45c7e029d3372736014223cbdefb80d8cae600cbc7252
 
 build:
   merge_build_host: True  # [win]
@@ -21,9 +21,10 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('fortran') }}  # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('fortran') }}        # [not win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -53,17 +54,17 @@ extra:
 
 # Package: mvtnorm
 # Title: Multivariate Normal and t Distributions
-# Version: 1.0-10
-# Date: 2019-03-04
-# Authors@R: c(person("Alan", "Genz", role = "aut"), person("Frank", "Bretz", role = "aut"), person("Tetsuhisa", "Miwa", role = "aut"), person("Xuefei", "Mi", role = "aut"), person("Friedrich", "Leisch", role = "ctb"), person("Fabian", "Scheipl", role = "ctb"), person("Bjoern", "Bornkamp", role = "ctb"), person("Martin", "Maechler", role = "ctb"), person("Torsten", "Hothorn", role = c("aut", "cre"), email = "Torsten.Hothorn@R-project.org", comment = c(ORCID = "0000-0001-8301-0471")))
+# Version: 1.0-11
+# Date: 2019-06-19
+# Authors@R: c(person("Alan", "Genz", role = "aut"), person("Frank", "Bretz", role = "aut"), person("Tetsuhisa", "Miwa", role = "aut"), person("Xuefei", "Mi", role = "aut"), person("Friedrich", "Leisch", role = "ctb"), person("Fabian", "Scheipl", role = "ctb"), person("Bjoern", "Bornkamp", role = "ctb", comment = c(ORCID = "0000-0002-6294-8185")), person("Martin", "Maechler", role = "ctb"), person("Torsten", "Hothorn", role = c("aut", "cre"), email = "Torsten.Hothorn@R-project.org", comment = c(ORCID = "0000-0001-8301-0471")))
 # Description: Computes multivariate normal and t probabilities, quantiles, random deviates and densities.
 # Imports: stats, methods
 # Depends: R(>= 3.5.0)
 # License: GPL-2
 # URL: http://mvtnorm.R-forge.R-project.org
 # NeedsCompilation: yes
-# Packaged: 2019-03-04 08:12:32 UTC; hothorn
-# Author: Alan Genz [aut], Frank Bretz [aut], Tetsuhisa Miwa [aut], Xuefei Mi [aut], Friedrich Leisch [ctb], Fabian Scheipl [ctb], Bjoern Bornkamp [ctb], Martin Maechler [ctb], Torsten Hothorn [aut, cre] (<https://orcid.org/0000-0001-8301-0471>)
+# Packaged: 2019-06-19 09:46:55 UTC; hothorn
+# Author: Alan Genz [aut], Frank Bretz [aut], Tetsuhisa Miwa [aut], Xuefei Mi [aut], Friedrich Leisch [ctb], Fabian Scheipl [ctb], Bjoern Bornkamp [ctb] (<https://orcid.org/0000-0002-6294-8185>), Martin Maechler [ctb], Torsten Hothorn [aut, cre] (<https://orcid.org/0000-0001-8301-0471>)
 # Maintainer: Torsten Hothorn <Torsten.Hothorn@R-project.org>
 # Repository: CRAN
-# Date/Publication: 2019-03-05 01:00:03 UTC
+# Date/Publication: 2019-06-19 12:40:03 UTC
