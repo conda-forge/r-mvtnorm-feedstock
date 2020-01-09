@@ -1,4 +1,4 @@
-{% set version = '1.0-11' %}
+{% set version = "1.0-12" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mvtnorm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mvtnorm/mvtnorm_{{ version }}.tar.gz
-  sha256: 0321612de99aa9bc75a45c7e029d3372736014223cbdefb80d8cae600cbc7252
+  sha256: 44c474c051986c7e25716292d20127746bf09168185d78b674a8239962ac2e0f
 
 build:
   merge_build_host: True  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
