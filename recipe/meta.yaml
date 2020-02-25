@@ -1,4 +1,4 @@
-{% set version = "1.0-12" %}
+{% set version = "1.1-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mvtnorm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mvtnorm/mvtnorm_{{ version }}.tar.gz
-  sha256: 44c474c051986c7e25716292d20127746bf09168185d78b674a8239962ac2e0f
+  sha256: 8112e12eb11f5db2ff145893f48426520e669be99b87889457dd2c4f2636cb5d
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -46,7 +46,7 @@ about:
   license: GPL-2
   summary: Computes multivariate normal and t probabilities, quantiles, random deviates and densities.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
