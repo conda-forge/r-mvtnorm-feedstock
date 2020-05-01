@@ -1,6 +1,6 @@
 appveyor:
   secure: {BINSTAR_TOKEN: tumuXLL8PU75WMnRDemRy02ruEq2RpNxeK3dz0MjFssnosPm2v4EFjfNB4PTotA1}
-provider: {linux_aarch64: default, linux_ppc64le: default, win: azure}
+provider: {linux_aarch64: default, linux_ppc64le: azure, win: azure}
 travis:
   secure: {BINSTAR_TOKEN: ufwB31GKbpEICSpG6I7+3x5HXFNBC4rUHNaHehBKXO9VTOA8iO85JqXqRfQg8/lTSByt2y0VC+5bQx6+F+xBDMlPtx03xpWGtutzDcde6sHGgXRu+9qhNQdR06FgXOM7y+pvyeRYSvrE3OwlAWT+IGYjOG2H93sg15uPaJz4fexWAvtcKic9M1sSTCgRgBNyLi69erTYleUKIqY2K/TIFDim3T6G+dXGLGaLF88Nx0vKbtnnshl1FhCHNXRwD+FWysksOyWYW5VvOSe/tMOABKEzolJuCMPJzbxGPlDWAACmL4yX2Zwu8mQ2jENb3wfZ24UYTKmNb7CoWbttvogm839pABRV/qFI5NrR9ODu2L8Qz9gJURB0/dV36W2k63CDgpBgP4mxPIC9/QiCoGXN/Vp+0D+jo/PNlvDJHouvi81X9+6PtDkxowpWgOZxTQ90nZn6+6WdO70T1WudqrTLq5pHnOHasmGq7mooMeg+DLbUGlKQMpPy/xQQO+D12g0QuNhmWou/euTWoBUS96XggMpUoiXwkyD7tabF/u5mGHPAljh7ZqOuvv2T7zh3LowuV4f2ISX58xWuqeDbe7QpkUH+dnjaNoJN3nNfa1fAbWRBYqdzeOJVRjRXZKrTaINkdI4oVUgebMEU0oLACCFd8sJar7+DGsHuzD8UuYPIJZk=}
 bot:
