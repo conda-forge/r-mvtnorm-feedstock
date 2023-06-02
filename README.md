@@ -1,11 +1,22 @@
+About r-mvtnorm-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mvtnorm-feedstock/blob/main/LICENSE.txt)
+
 About r-mvtnorm
-===============
+---------------
 
 Home: http://mvtnorm.R-forge.R-project.org
 
 Package license: GPL-2.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mvtnorm-feedstock/blob/main/LICENSE.txt)
+Summary: Computes multivariate normal and t probabilities, quantiles, random deviates and densities.
+About r-mvtnorm
+---------------
+
+Home: http://mvtnorm.R-forge.R-project.org
+
+Package license: GPL-2.0-only
 
 Summary: Computes multivariate normal and t probabilities, quantiles, random deviates and densities.
 
