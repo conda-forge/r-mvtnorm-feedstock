@@ -1,4 +1,4 @@
-{% set version = "1.2-4" %}
+{% set version = "1.2-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mvtnorm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mvtnorm/mvtnorm_{{ version }}.tar.gz
-  sha256: 848287bb0016eaeab7cef474087ed4e6fadb805e26c767c816c204037d3d9aff
+  sha256: 9e7882a3a24d5e288097466ed77fd6bb9e5fdfadfdfed953367b1d0667e3eda6
 
 build:
   merge_build_host: true  # [win]
@@ -23,7 +23,9 @@ requirements:
   build:
     - cross-r-base {{ r_base }}        # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ posix }}filesystem            # [win]
