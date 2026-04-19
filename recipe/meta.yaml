@@ -3,7 +3,7 @@
 
 package:
   name: r-mvtnorm
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -46,9 +50,15 @@ test:
 about:
   home: http://mvtnorm.R-forge.R-project.org
   license: GPL-2.0-only
-  summary: Computes multivariate normal and t probabilities, quantiles, random deviates and densities.
+  summary: Computes multivariate normal and t probabilities, quantiles, random deviates, and
+    densities. Log-likelihoods for multivariate Gaussian models and Gaussian copulae
+    parameterised by Cholesky factors of covariance or precision matrices are implemented
+    for interval-censored and exact data, or a mix thereof. Score functions for these
+    log-likelihoods are available. A class representing multiple lower triangular matrices
+    and corresponding methods are part of this package.
   license_family: GPL2
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
