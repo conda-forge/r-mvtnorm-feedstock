@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mvtnorm-feeds
 About r-mvtnorm
 ---------------
 
-Home: http://mvtnorm.R-forge.R-project.org
+Home: https://codeberg.org/thothorn/mvtnorm
 
 Package license: GPL-2.0-only
 
@@ -16,7 +16,7 @@ Summary: Computes multivariate normal and t probabilities, quantiles, random dev
 About r-mvtnorm
 ---------------
 
-Home: http://mvtnorm.R-forge.R-project.org
+Home: https://codeberg.org/thothorn/mvtnorm
 
 Package license: GPL-2.0-only
 
