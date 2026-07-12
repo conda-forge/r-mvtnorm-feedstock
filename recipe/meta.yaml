@@ -1,15 +1,15 @@
-{% set version = "1.4-1" %}
+{% set version = "1.4-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-mvtnorm
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/mvtnorm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mvtnorm/mvtnorm_{{ version }}.tar.gz
-  sha256: cda87fb2bbf99e0bed40f9ea7bdaca647fba42845f12cc54bed8f3892e07c236
+  sha256: 466302a08c9306d11384d85bf677893e4794541bde2991409be54e1f7b304b6e
 
 build:
   number: 0
